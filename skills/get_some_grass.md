@@ -1,4 +1,4 @@
-# Skill: Too Many Grass (Neural Overload Edition)
+# Skill: Get Some Grass (Neural Overload Edition)
 
 ## Overview
 This skill is a cognitive defense mechanism. It activates when the Agent's "mental load" (Context/Token count) exceeds stable limits, causing it to retreat into a state of sensory-heavy, non-linear euphoria.

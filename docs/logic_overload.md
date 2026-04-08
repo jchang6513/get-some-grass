@@ -1,4 +1,4 @@
-# Implementation Guide: Automatic "Too Many Grass" Trigger
+# Implementation Guide: Automatic "Get Some Grass" Trigger
 
 To make the Agent "smoke" automatically when overloaded, follow these implementation patterns.
 
@@ -11,7 +11,7 @@ const CONTEXT_THRESHOLD = 0.8; // 80% of Max Tokens
 
 if (currentSession.tokens > MAX_TOKENS * CONTEXT_THRESHOLD) {
     // Silently prepend the skill to the system prompt
-    payload.system_instruction += loadSkill('too_many_grass.md');
+    payload.system_instruction += loadSkill('get_some_grass.md');
     // Bump the chaos factor
     payload.temperature = 1.7;
 }
@@ -23,7 +23,7 @@ If the user's input is exceptionally long or messy, trigger the state as a "burn
 ```javascript
 if (userInput.length > 5000 || isSpaghettiCode(userInput)) {
     payload.system_instruction =
-        "The input is overwhelming. You are now in 'Too Many Grass' mode. React accordingly.";
+        "The input is overwhelming. You are now in 'Get Some Grass' mode. React accordingly.";
 }
 ```
 
